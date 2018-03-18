@@ -1,0 +1,774 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+header nav {
+  text-align: right;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 1em;
+  position: fixed;
+  width: 100%;
+}
+header nav a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2em 1em .5em;
+  -webkit-transition: all .3s ease-in;
+}
+.small {
+  padding: .5em 1em;
+}
+header nav a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.active {
+  background: rgba(255,255,255,0.3);
+}
+
+.portion {
+  
+  background-image:  url('http://t8ls.com/wp-content/uploads/2017/05/neat-design-wallpaper-design-for-walls-wall-designs-impressive-wall-and.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+.portion.two {
+  background-image: url('https://cdn.pixabay.com/photo/2018/03/05/18/23/paper-3201417_1280.jpg');
+}
+.portion h2 {
+  color: white;
+  font-weight: normal;
+  font-size: 3em;
+  padding: 2em 0;
+  margin: 0;
+  text-shadow: 0 0 10px black;
+  background: rgba(0,0,0,0.6);
+}
+
+.info {
+  background: #0b0a0a;
+  color: #777;
+  padding: 3em 15%;
+  letter-spacing: 0.08rem;
+}
+
+.button {
+  text-align: center;
+}
+.button a {
+  display: inline-block;
+  border: 2px solid #777;
+  padding: .75em 1.5em;
+  color: #777;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  letter-spacing: .15em;
+  word-spacing: .25em;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.button a:hover {
+  color: #FFFAF0;
+  background: #777;
+}
+footer.info {
+  color: #FFFAF0;
+  background: #777;
+  padding: 0 auto;
+  text-align: center;
+}
+
+#toTop img {
+  width: 50px;
+}
+#toTop img:hover {
+  cursor: pointer;
+}
+nav img {
+  z-index: 1000;
+  height: 2.5em;
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  transition: all 0.5s linear;
+}
+
+.move {
+  top: -60px;
+}
+
+nav span {
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  font-weight: bold;
+  transition: all 0.5s ease-in;
+}
+
+.movetext {
+  top: -30px;
+}
+
+.subheading1{
+	font-family: 'Courgette', cursive;
+	font-size: 45px;
+	width:100%; 
+	border-bottom: 1px solid #fff; 
+	line-height:0.1em; 
+	margin:10px 0 20px;
+}
+
+.subheading2{
+	font-family: 'Artifika', serif;
+}
+
+.portionheading{
+	color: #ffdf00;
+	font-family: 'Courgette', cursive;
+}
+
+.fa-phone-square, .fa-envelope-square {
+	font-size: 90px;
+	margin: 3px 20px;
+}
+
+#portion4Content {
+	margin: 50px 0;
+	text-align: center;
+}
+
+#portion2Content {
+	margin: 50px 0;
+}
+
+.card-title {
+	color: white;
+	text-align: center;
+	font-size: 25px;
+
+}
+
+.card-body {
+	background: #303030;
+}
+
+.card {
+	box-shadow: 1px 1px 1px 2px #ccc;
+	display: block;
+	width: 100%;
+}
+
+.cardContainer {
+  position: relative;
+  padding: 20px; 
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 0;
+  transition: .5s ease;
+  width: 100%;
+}
+
+.cardContainer:hover .overlay { 	
+  height: 100%;
+  background-image: url(http://t8ls.com/wp-content/uploads/2017/05/neat-design-wallpaper-design-for-walls-wall-designs-impressive-wall-and.jpg);
+}
+
+.text {
+  color: white;
+  position: absolute;
+  text-align: center;
+}
+
+.cardSubHeading {
+	padding: 10px;
+	font-size: 25px;
+	background-color: #000;
+}
+
+.cardSubBody {
+	font-size: 15px;
+	margin: 10px;
+
+}
+
+
+
+.iconShake:hover {
+
+	color: #ffdf00;
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/*----------------------------------------------  TOOLTIP ------------------------------------------------------------*/
+
+/* Tooltip container */
+.tooltipSpan {
+    position: relative;
+    display: inline-block;
+
+}
+
+/* Tooltip text */
+.tooltipSpan .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 6px;
+ 	opacity: 0.9;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltipSpan:hover .tooltiptext {
+    visibility: visible;
+    }
+
+.tooltipSpan .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.skill {
+	margin: 30px;
+	font-weight: bolder;
+	letter-spacing: 0.15rem;
+}
+
+/************************************************* START: Google Map API Integeration *****************************************************/
+#map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
+
+
+/************************************************* START: Progressive progress bar ********************************************************/
+ .KW_progressContainer {
+  left:0;
+  width: 100%;
+  height: 0.4em;
+  margin-bottom: 0px;
+  position: fixed;
+  bottom: 0px;
+  overflow: hidden;
+  background-color: white;
+  content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.KW_progressBar {
+  width: 0%;
+  float: left;
+  height: 100%;
+  z-index:99;
+  max-width: 100%;
+  background-color:orange;
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
+
+/*********************************************** On view progress starts *******************************************************************/
+.six-sec-ease-in-out {
+-webkit-transition: width 6s ease-in-out;
+-moz-transition: width 6s ease-in-out;
+-ms-transition: width 6s ease-in-out;
+-o-transition: width 6s ease-in-out;
+transition: width 6s ease-in-out;
+}
+
+/***************************************************Grey color Email **********************************************************************/
+.goldColor {
+	color: #ccc;
+}
+
+
+/***************************************************main Page  **********************************************************************/
+
+#mainPage {
+	background-color: black;
+	height: 100vh;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first {
+	background-image:  url('http://t8ls.com/wp-content/uploads/2017/05/neat-design-wallpaper-design-for-walls-wall-designs-impressive-wall-and.jpg');
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	border-right: 2px solid #FFDF00;
+}
+
+#second {
+	background-color: black;
+	height: 100vh;
+	position: absolute;
+	right: 0;
+	color: white;
+	font-size: 40px;
+}
+
+
+#dot {
+  height: 35vh;
+  width: 35vh;
+  background-color: #FFDF00;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  opacity: 1;
+  /*left: 50%;
+  top: 50%;*/
+  text-align: center;
+  vertical-align: middle;
+  /*transform: translate(-50%, -50%);*/
+  cursor: pointer;
+  }
+
+.fa-th {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #000;
+}
+
+.fa-th:hover{
+	
+	transition: 0.9s ease;
+	line-height: 25px;
+	transform: rotateY(180deg)  translateY(-50%);
+	-webkit-transform: rotateY(180deg)  translateY(-50%);
+	-moz-transform: rotateY(180deg)  translateY(-50%);
+	transform-origin: center; 
+	color: #FFf;
+
+}
+
+#mainpageheading {
+	color: white;
+	position: absolute;
+	bottom: 5vh;
+	left: 5vh;
+	letter-spacing: 0.5rem;
+}
+
+@media (max-width: 300px) {
+    #name { font-size: 25px;
+    letter-spacing: 0.3rem; }
+
+    #tagline{
+    	font-size: 15px;
+    	letter-spacing: 0.3rem; 
+    }
+
+    #dot {
+    	height: 10vh;
+    	width: 10vh;
+    }
+
+    .widthChange {
+	height: 15vh!important;
+	width: 15vh!important;
+	}
+
+}
+
+@media (min-width: 500px) {
+    #name { font-size: 25px; 
+    letter-spacing: 0.3rem; }
+
+    #tagline{
+    	font-size: 15px;
+    	letter-spacing: 0.3rem; 
+    }
+
+    #dot {
+    	height: 15vh;
+    	width: 15vh;
+    }
+
+    .widthChange {
+	height: 20vh!important;
+	width: 20vh!important;
+	}
+}
+
+@media (min-width: 700px) {
+    #name { font-size: 25px; 
+    letter-spacing: 0.3rem; }
+    #tagline{
+    	font-size: 15px;
+    }
+    #dot {
+    	height: 15vh;
+    	width: 15vh;
+    }
+
+    .widthChange {
+	height: 20vh!important;
+	width: 20vh!important;
+	}
+
+}
+
+@media (min-width: 1200px) {
+    #name { font-size: 50px;
+    letter-spacing: 0.3rem;  }
+
+    #tagline{
+	font-size: 25px;
+	letter-spacing: 0.3rem; 
+	}
+
+	#dot {
+    	height: 30vh;
+    	width: 30vh;
+    }
+
+    .widthChange {
+	height: 35vh!important;
+	width: 35vh!important;
+	}
+}
+
+
+#menubar {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 6rem;	
+	display: none;
+	letter-spacing: 0.4rem;
+}
+
+#secondAbout {
+	margin-left: 150px;
+}
+
+#secondSkills {
+	margin-left: 250px;
+}
+
+#secondProject {
+	margin-left: 250px;
+}
+
+#secondContact {
+	margin-left: 150px;
+}
+
+.show {
+	display: inline-block!important;
+	transition-delay: 1s;
+}
+
+.menusub a {
+	color: white;
+}
+
+.menusub a:active {
+	color: #FFDF00;
+	background-color: #000;
+}
+
+.menusub a:hover {
+	font-weight: bold;
+	color: #FFDF00;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.black {
+	color: #fff;
+}
+
+
+
+.transform {
+  -webkit-transition: all 1s ease;  
+  -moz-transition: all 1s ease;  
+  -o-transition: all 1s ease;  
+  -ms-transition: all 1s ease;  
+  transition: all 1s ease;
+}
+
+.rotateDiv {
+	transform: rotateZ(180deg);
+}
+
+/*.firstwidthChange {
+	width: 45%!important;
+}*/
+
+.skillhead {
+	color: #ffdf00;
+	margin-top: 30px;
+}
+
+.subskill {
+	letter-spacing: 0;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+.skillknowledge {
+	font-size: 0.7em;
+	margin: 15px;
+	line-height: 2em;
+}
+
+.leftText {
+	text-align: right;
+	border-right: 2px solid #ffdf00;
+	color: #ffdf00;
+	padding-left: 30px;
+	font-family: Oswald;
+}
+
+.yearleft {
+	font-size: 30px;
+	margin: 0 0 20px 0;
+	border-bottom: 1px solid #ffdf00;
+	padding: 0 0 20px 0;
+}
+
+.borderNone {
+	border: none!important;
+	padding: 0;
+	text-align: left;
+}
+
+.lessSpace {
+	line-height: 1.3em;
+    font-size: 0.8em;
+    text-align: left;
+}
+
+.subheader {
+	font-size: 0.7em;
+}
+
+/*************************************************************** MenuBar ************************************************************/
+
+/*.parent2 {
+	margin-left: -240px;
+    margin-top: -80px;
+  top:15px;
+  left:15px;
+ display:block;
+  width:100px;
+  height:100px;
+  background-color:transparent;
+  border-radius:50%;
+  z-index:20;
+}
+
+
+.test1 {
+  width:60%;
+  height:60%;
+  background-color:#777;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.test2 {
+  width:60%;
+  height:60%;
+  background-color: #777;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+}
+.test3 {
+  width:60%;
+  height:60%;
+  background-color:#777;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;  
+}
+  .test4 {
+  width:60%;
+  height:60%;
+  background-color: #777;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+}
+.mask2 {
+
+  top:15px;
+  left:15px;
+  width:100px;
+  height:100px;
+  background: #ffdf00;
+  border-radius:50%;
+  z-index:21;
+  color:white;
+  text-align:center;
+  line-height:120px;
+  cursor:pointer;
+}
+*/
+
+
+.parent2 {
+	margin-left: -240px;
+    margin-top: -80px;
+  top:15px;
+  left:15px;
+  position:relative;
+ display:block;
+  width:100px;
+  height:100px;
+  color:#ffdf00;
+  border-radius:50%;
+  z-index:20;
+}
+.test1 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    position:absolute;
+}
+.test2 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+}
+.test3 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;  
+}
+  .test4 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+}
+.mask2 {
+  top:15px;
+  left:15px;
+  width:100px;
+  height:100px;
+  background: #ffdf00;
+  border-radius:50%;
+  position: relative;
+  z-index:21;
+  color:white;
+  text-align:center;
+  line-height:120px;
+  cursor:pointer;
+  
+}
+
+
+.parent2 a {
+	color: white!important;
+}
