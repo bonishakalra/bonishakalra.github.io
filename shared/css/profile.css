@@ -36,14 +36,14 @@ header nav a:hover {
 
 .portion {
   
-  background-image:  url('http://t8ls.com/wp-content/uploads/2017/05/neat-design-wallpaper-design-for-walls-wall-designs-impressive-wall-and.jpg');
+  background-image:  url('../images/wallpaper2.jpg');
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   text-align: center;
 }
 .portion.two {
-  background-image: url('https://cdn.pixabay.com/photo/2018/03/05/18/23/paper-3201417_1280.jpg');
+  background-image: url('../images/wallpaper1.jpg');
 }
 .portion h2 {
   color: white;
@@ -188,7 +188,7 @@ nav span {
 
 .cardContainer:hover .overlay { 	
   height: 100%;
-  background-image: url(http://t8ls.com/wp-content/uploads/2017/05/neat-design-wallpaper-design-for-walls-wall-designs-impressive-wall-and.jpg);
+  background-image: url(../images/wallpaper2.jpg);
 }
 
 .text {
@@ -341,7 +341,7 @@ transition: width 6s ease-in-out;
 }
 
 #first {
-	background-image:  url('http://t8ls.com/wp-content/uploads/2017/05/neat-design-wallpaper-design-for-walls-wall-designs-impressive-wall-and.jpg');
+	background-image:  url(../images/wallpaper2.jpg);
 	height: 100vh;
 	position: absolute;
 	left: 0;

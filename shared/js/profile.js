@@ -84,8 +84,8 @@ var projectListHTML = '';
 projects.forEach(function(project) {
 	projectListHTML += '<div class="cardContainer col-md-4 col-sm-6 col-xs-6"><div class="card"><img class="card-img-top" src="' + project.image + '">';
 	projectListHTML += '<div class="card-body"><h5 class="card-title">' + project.name + '</h5></div></div><div class="overlay">';
-	projectListHTML += '<div class="text"><div class="cardSubHeading">' + project.name + '</div><div class="cardSubBody"><span>' + project.content + '</span>';
-	projectListHTML += '<hr><button class="btn btn-danger">Check This Out!</button></div></div></div></div>';
+	projectListHTML += '<div class="text row"><div class="cardSubHeading col-xs-12 col-md-12">' + project.name + '</div><div class="cardSubBody text-left col-xs-12 col-md-12"><span>' + project.content + '</span>';
+	projectListHTML += '<hr><div class="text-center col-xs-12 col-md-12"><button class="btn btn-warning text-white font-weight-bold">Check This Out!</button></div></div></div></div></div>';
 });
 
 $('#projectSection').append(projectListHTML);
@@ -122,47 +122,34 @@ $('#skill-set').append(skillAppendHTML);
 
 /************************************************* START: Google Map API Integeration *****************************************************/
 
-var map;
-var infowindow;
+var locations = [
+      ['Hinjewadi, Pune', 18.516726, 73.856255],
+      ['Noida, UttarPradesh', 28.535517,	77.391029]
+    ];
 
-function initMap() {
-  var pyrmont = {lat: 20.593, lng:  78.962};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: new google.maps.LatLng( 18.516726, 73.856255),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
 
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: pyrmont,
-    zoom: 15
-  });
+    var infowindow = new google.maps.InfoWindow();
 
-  infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch({
-    location: pyrmont,
-    radius: 500,
-    type: ['store']
-  }, callback);
-}
+    var marker, i;
 
-function callback(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
-    }
-  }
-}
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
 
-function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
-    infowindow.open(map, this);
-  });
-}
-		
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }		
 
 
 /**************************************** Progressive Progress Bar************************************************/
@@ -184,10 +171,7 @@ function createMarker(place) {
     
     function loadDaBars() {
 				$(".progress .progress-bar").each(function() {
-					$(this)
-						.data("origWidth", $(this).width())
-						.width(0)
-						.animate({
+					$(this).data("origWidth", $(this).width()).width(0).animate({
 							width: $(this).data("origWidth")
 						}, 1200);
 				});
