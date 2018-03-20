@@ -49,32 +49,32 @@ $(document).scroll(function () {
 
 var projects = [{
 	'name' : 'Patatap Clone',
-	'image' : './shared/images/Patatap.png',
+	'image' : './shared/images/patatap.png',
 	'content' : 'Patatap is an animation and sound kit. With the touch of a finger create melodies charged with moving shapes.',
 	'url' : ''
 }, {
 	'name' : 'Mobile Compare',
-	'image' : './shared/images/Patatap.png',
+	'image' : './shared/images/patatap.png',
 	'content' : 'Find the mobile you need by comparing it with others.',
 	'url' : ''
 }, {
 	'name' : 'Color Game',
-	'image' : './shared/images/colorGame.png',
+	'image' : './shared/images/colorgame.PNG',
 	'content' : 'Challenge yourself to know the right combination',
 	'url' : ''
 }, {
 	'name' : 'To-Do List',
-	'image' : './shared/images/to-do.png',
+	'image' : './shared/images/todo.PNG',
 	'content' : 'Handy app to plan your activities.',
 	'url' : ''
 }, {
 	'name' : 'StarTrak',
-	'image' : './shared/images/Patatap.png',
+	'image' : './shared/images/patatap.png',
 	'content' : 'Tracking of starters made easy with new features.',
 	'url' : ''
 }, {
 	'name' : 'YelpCamp Clone',
-	'image' : './shared/images/yelpcamp.png',
+	'image' : './shared/images/yelpcamp.PNG',
 	'content' : 'If you are planning to go for camping, this is the best place to find out the places to choose from!',
 	'url' : ''
 }];
@@ -82,7 +82,7 @@ var projects = [{
 
 var projectListHTML = '';
 projects.forEach(function(project) {
-	projectListHTML += '<div class="cardContainer col-md-4 col-sm-6 col-xs-6"><div class="card"><img class="card-img-top" src="' + project.image + '">';
+	projectListHTML += '<div class="cardContainer col-md-4 col-sm-6 col-xs-6"><div class="card"><img class="card-img-top" src="' + $.trim(project.image) + '">';
 	projectListHTML += '<div class="card-body"><h5 class="card-title">' + project.name + '</h5></div></div><div class="overlay">';
 	projectListHTML += '<div class="text row"><div class="cardSubHeading col-xs-12 col-md-12">' + project.name + '</div><div class="cardSubBody text-left col-xs-12 col-md-12"><span>' + project.content + '</span>';
 	projectListHTML += '<hr><div class="text-center col-xs-12 col-md-12"><button class="btn btn-warning text-white font-weight-bold">Check This Out!</button></div></div></div></div></div>';
