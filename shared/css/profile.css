@@ -183,12 +183,14 @@ nav span {
   overflow: hidden;
   height: 0;
   transition: .5s ease;
-  width: 100%;
+  width: 90%;
 }
 
 .cardContainer:hover .overlay { 	
-  height: 100%;
-  background-image: url(../images/wallpaper2.jpg);
+      height: 90%;
+    background-image: url(../images/wallpaper2.jpg);
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .text {
