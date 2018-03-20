@@ -225,7 +225,7 @@ $('#skill-set').append(skillAppendHTML);
       ['Hinjewadi, Pune', 18.516726, 73.856255],
       ['Noida, UttarPradesh', 28.535517,	77.391029]];
   
-  loadScript( 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAbntNP8n_-oVYBe_7cKxagDRAr9qe8pjQ&sensor=false&callback=initialize'});
+  loadScript( 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAbntNP8n_-oVYBe_7cKxagDRAr9qe8pjQ&sensor=false&callback=initialize');
 
 function initialize() {
     var mapOptions = {
