@@ -225,12 +225,9 @@ $('#skill-set').append(skillAppendHTML);
       ['Hinjewadi, Pune', 18.516726, 73.856255],
       ['Noida, UttarPradesh', 28.535517,	77.391029]];
   
-  loadScript( 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAbntNP8n_-oVYBe_7cKxagDRAr9qe8pjQ&sensor=false&callback=initialize',
-              function(){log('google-loader has been loaded, but not the maps-API '); });
+  loadScript( 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAbntNP8n_-oVYBe_7cKxagDRAr9qe8pjQ&sensor=false&callback=initialize'});
 
 function initialize() {
-    
-    log('maps-API has been loaded, ready to use');
     var mapOptions = {
           zoom: 4,
           center: new google.maps.LatLng(18.516726, 73.856255),
@@ -258,9 +255,6 @@ function initialize() {
 	}
   }
 
-function log(str){
-  document.getElementsByTagName('pre')[0].appendChild(document.createTextNode('['+new Date().getTime()+']\n'+str+'\n\n'));
-}
 
 
 /**************************************** Progressive Progress Bar************************************************/
