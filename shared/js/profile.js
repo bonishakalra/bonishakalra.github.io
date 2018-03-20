@@ -49,17 +49,17 @@ $(document).scroll(function () {
 
 var projects = [{
 	'name' : 'Patatap Clone',
-	'image' : './shared/images/patatap.png',
+	'image' : './shared/images/Patatap.png',
 	'content' : 'Patatap is an animation and sound kit. With the touch of a finger create melodies charged with moving shapes.',
 	'url' : ''
 }, {
 	'name' : 'Mobile Compare',
-	'image' : './shared/images/patatap.png',
+	'image' : './shared/images/Patatap.png',
 	'content' : 'Find the mobile you need by comparing it with others.',
 	'url' : ''
 }, {
 	'name' : 'Color Game',
-	'image' : './shared/images/colorgame.PNG',
+	'image' : './shared/images/colorGame.PNG',
 	'content' : 'Challenge yourself to know the right combination',
 	'url' : ''
 }, {
@@ -69,7 +69,7 @@ var projects = [{
 	'url' : ''
 }, {
 	'name' : 'StarTrak',
-	'image' : './shared/images/patatap.png',
+	'image' : './shared/images/Patatap.png',
 	'content' : 'Tracking of starters made easy with new features.',
 	'url' : ''
 }, {
